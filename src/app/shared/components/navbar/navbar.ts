@@ -1,9 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { PROFILE_DATA } from '../../../core/data/portfolio.data';
 
 @Component({
-  imports: [],
   selector: 'app-navbar',
-  styleUrl: './navbar.css',
+  standalone: true,
   templateUrl: './navbar.html',
+  styleUrl: './navbar.css',
 })
-export class Navbar {}
+export class Navbar {
+  protected readonly profile = PROFILE_DATA;
+  protected readonly menuOpen = signal(false);
+
+  protected toggleMenu(): void {
+    this.menuOpen.update((open) => !open);
+  }
+
+  protected closeMenu(): void {
+    this.menuOpen.set(false);
+  }
+}
