@@ -1,1 +1,58 @@
-<p>experience works!</p>
+<section id="experiencia" class="border-t border-slate-800/80 py-16 sm:py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <!-- Encabezado de sección -->
+    <div class="mb-12 max-w-2xl space-y-2">
+      <p class="font-mono text-xs uppercase tracking-wider text-cyan-400">// Trayectoria</p>
+      <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+        Experiencia Laboral y Práctica
+      </h2>
+      <p class="text-sm text-slate-400 sm:text-base">
+        Combinación de desarrollo de software aplicado con disciplina operativa, orden y resolución de incidencias en entornos reales.
+      </p>
+    </div>
+
+    <!-- Línea de tiempo -->
+    <div class="relative space-y-8 border-l border-slate-800 pl-6 sm:ml-3 sm:pl-8">
+      @for (item of experiences; track item.role) {
+        <article class="relative rounded-xl border border-slate-800 bg-[#0d1322] p-6 transition hover:border-cyan-500/40">
+          <!-- Punto indicador en la línea -->
+          <span
+            class="absolute -left-[31px] top-7 h-3.5 w-3.5 rounded-full border-2 border-cyan-400 bg-[#090d16] sm:-left-[39px]"
+          ></span>
+
+          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+            <div>
+              <span class="font-mono text-xs text-emerald-400">{{ item.type }}</span>
+              <h3 class="text-lg font-semibold text-white">{{ item.role }}</h3>
+              <p class="text-sm font-medium text-slate-400">{{ item.company }}</p>
+            </div>
+            <span class="w-fit rounded-md border border-slate-700/80 bg-slate-900 px-3 py-1 font-mono text-xs text-slate-300">
+              {{ item.period }}
+            </span>
+          </div>
+
+          <p class="mt-4 text-sm leading-relaxed text-slate-300">
+            {{ item.description }}
+          </p>
+
+          <ul class="mt-4 space-y-2 text-sm text-slate-400">
+            @for (achievement of item.achievements; track achievement) {
+              <li class="flex items-start gap-2.5">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></span>
+                <span>{{ achievement }}</span>
+              </li>
+            }
+          </ul>
+
+          <div class="mt-5 flex flex-wrap gap-2">
+            @for (tag of item.tags; track tag) {
+              <span class="rounded-md border border-slate-800 bg-slate-900 px-2.5 py-1 font-mono text-xs text-cyan-300">
+                {{ tag }}
+              </span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
