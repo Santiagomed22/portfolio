@@ -35,3 +35,9 @@ export interface CertificationItem {
   category: 'Ciberseguridad' | 'Desarrollo' | 'Formación';
   skills: string[];
 }
+
+export interface SkillCategory {
+  title: string;
+  tag: string;
+  items: string[];
+}

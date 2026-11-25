@@ -3,6 +3,7 @@ import {
   TechLayer,
   ExperienceItem,
   CertificationItem,
+  SkillCategory,
 } from '../models/portfolio.model';
 
 export const PROFILE_DATA: ProfileInfo = {
@@ -75,5 +76,23 @@ export const CERTIFICATIONS_DATA: CertificationItem[] = [
     date: '2026',
     category: 'Ciberseguridad',
     skills: ['Pentesting Básico', 'Python', 'Seguridad'],
+  },
+];
+
+export const SKILLS_DATA: SkillCategory[] = [
+  {
+    title: 'Frontend',
+    tag: 'UI / WEB',
+    items: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
+  },
+  {
+    title: 'Backend & Bases de Datos',
+    tag: 'SERVER / DB',
+    items: ['Java', 'Python', 'MySQL', 'APIs REST', 'Firebase'],
+  },
+  {
+    title: 'Ciberseguridad & Herramientas',
+    tag: 'SEC / OPS',
+    items: ['Pentesting Básico', 'Análisis de Vulnerabilidades', 'Git', 'GitHub', 'Linux'],
   },
 ];
