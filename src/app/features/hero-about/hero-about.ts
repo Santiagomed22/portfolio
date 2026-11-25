@@ -11,3 +11,4 @@ import { PROFILE_DATA } from '../../core/data/portfolio.data';
 export class HeroAbout {
   protected readonly profile = PROFILE_DATA;
 }
+

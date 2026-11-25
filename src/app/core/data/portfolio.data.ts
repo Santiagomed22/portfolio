@@ -14,7 +14,7 @@ export const PROFILE_DATA: ProfileInfo = {
   cvPath: 'assets/docs/CV_Santiago_Rudas.pdf',
   socials: {
     github: 'https://github.com/Santiagomed22',
-    linkedin: 'https://linkedin.com/in/tu-usuario',
+    linkedin: 'https://www.linkedin.com/in/santiago-rudas-80b706314/',
   },
 };
 
