@@ -2,7 +2,7 @@ import {
   ProfileInfo,
   TechLayer,
   ExperienceItem,
-  CertificationItem,
+  CertificationCategory,
   SkillCategory,
 } from '../models/portfolio.model';
 
@@ -69,16 +69,6 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   },
 ];
 
-export const CERTIFICATIONS_DATA: CertificationItem[] = [
-  {
-    title: 'Bootcamp / Diplomado en Ciberseguridad, Pentesting y Python',
-    issuer: 'Formación Especializada',
-    date: '2026',
-    category: 'Ciberseguridad',
-    skills: ['Pentesting Básico', 'Python', 'Seguridad'],
-  },
-];
-
 export const SKILLS_DATA: SkillCategory[] = [
   {
     title: 'Frontend',
@@ -94,5 +84,113 @@ export const SKILLS_DATA: SkillCategory[] = [
     title: 'Ciberseguridad & Herramientas',
     tag: 'SEC / OPS',
     items: ['Pentesting Básico', 'Análisis de Vulnerabilidades', 'Git', 'GitHub', 'Linux'],
+  },
+];
+
+export const CERTIFICATIONS_DATA: CertificationCategory[] = [
+  {
+    id: 'ciberseguridad',
+    category: 'Ciberseguridad',
+    tag: 'SEC / PENTEST',
+    description: 'Bootcamps y diplomados en seguridad informática, análisis de vulnerabilidades y pentesting.',
+    diplomas: [
+      {
+        title: 'Peritaje e informática forense',
+        issuer: 'HackerMentor',
+        date: '2026',
+        imageUrl: 'images/Ciberseguridad-images/PERITAJE-INFORMATICAFORENSE.png',
+      },
+      {
+        title: 'PMJ Certified',
+        issuer: 'HackerMentor',
+        date: '2025',
+        imageUrl: 'images/Ciberseguridad-images/CIBERSEGURIDADYHACKING.png',
+      },
+      {
+        title: 'Fundamentos de ciberseguridad',
+        issuer: 'Santander Open Academy',
+        date: '3 de noviembre de 2026',
+        imageUrl: 'images/Ciberseguridad-images/FUNDAMENTOS.png',
+      },
+      {
+        title: 'Ciberseguridad en el Teletrabajo',
+        issuer: 'Google Actívate',
+        date: '3 de noviembre de 2026',
+        imageUrl: 'images/Ciberseguridad-images/INCIBE1CT.png',
+      },
+    ],
+  },
+
+  {
+    id: 'ia',
+    category: 'IA',
+    tag: 'AI / AUTOMATION',
+    description: 'Formación en inteligencia artificial aplicada, ingeniería de prompts y flujos automatizados.',
+    diplomas: [
+      {
+        title: 'Certificado Hackaton',
+        issuer: 'Oracle Next Education',
+        date: '31 de agosto del 2026',
+        imageUrl: 'images/IA-images/ALURA.png',
+      },
+      {
+      title: 'Certificate of completion: AI Capabilities and Limitations',
+      issuer: 'Anthropic',
+      date: '2026',
+      imageUrl: 'images/IA-images/ANTHROPIC.png',
+    },
+    {
+      title: 'Claude 101',
+      issuer: 'Anthropic',
+      date: '2026',
+      imageUrl: 'images/IA-images/CLAUDE101.png',
+    },
+    {
+      title: 'Domina la IA con Gemini',
+      issuer: 'Santander Open Academy',
+      date: '2026',
+      imageUrl: 'images/IA-images/IACONGEMINI.png',
+    },
+    {
+      title: 'Cursor con Python',
+      issuer: 'Santander Open Academy',
+      date: '2026',
+      imageUrl: 'images/IA-images/PYTHON+IA.png',
+    },
+    ],
+  },
+  {
+    id: 'back',
+    category: 'BACK',
+    tag: 'SERVER / DB',
+    description: 'Certificaciones en Python, Java, lógica de servidor, APIs y bases de datos relacionales.',
+    diplomas: [
+      {
+        title: 'Python',
+        issuer: 'Santander Open Academy',
+        date: '2026',
+        imageUrl: 'images/Backend-images/PYTHON1.png',
+      },
+      {
+        title: 'Implementacion de SOFTWARE',
+        issuer: 'Politecnico Internacional',
+        date: '29 de julio del 2026',
+        imageUrl: 'images/Backend-images/PI-BACK.png',
+      },
+    ],
+  },
+  {
+    id: 'front',
+    category: 'FRONT',
+    tag: 'UI / WEB',
+    description: 'Desarrollo web moderno con Angular, TypeScript, JavaScript, HTML5, CSS3 y diseño responsivo.',
+    diplomas: [
+      {
+        title: 'Desarrollo Frontend con Angular y TypeScript',
+        issuer: 'Plataforma / Institución',
+        date: '2026',
+        imageUrl: 'images/Front-images/diploma-1.png',
+      },
+    ],
   },
 ];

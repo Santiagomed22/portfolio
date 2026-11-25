@@ -28,16 +28,23 @@ export interface ExperienceItem {
   tags: string[];
 }
 
-export interface CertificationItem {
-  title: string;
-  issuer: string;
-  date: string;
-  category: 'Ciberseguridad' | 'Desarrollo' | 'Formación';
-  skills: string[];
-}
-
 export interface SkillCategory {
   title: string;
   tag: string;
   items: string[];
+}
+
+export interface DiplomaItem {
+  title: string;
+  issuer: string;
+  date: string;
+  imageUrl: string;
+}
+
+export interface CertificationCategory {
+  id: string;
+  category: 'Ciberseguridad' | 'IA' | 'BACK' | 'FRONT';
+  tag: string;
+  description: string;
+  diplomas: DiplomaItem[];
 }
