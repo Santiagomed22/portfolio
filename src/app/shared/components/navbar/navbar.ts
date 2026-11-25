@@ -18,4 +18,14 @@ export class Navbar {
   protected closeMenu(): void {
     this.menuOpen.set(false);
   }
+
+  protected goToCertifications(event: Event): void {
+    event.preventDefault();
+    this.closeMenu();
+
+    setTimeout(() => {
+      const element = document.getElementById('certifications');
+      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
 }
