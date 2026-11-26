@@ -5,9 +5,10 @@ import { HeroAbout } from './features/hero-about/hero-about';
 import { Experience } from './features/experience/experience';
 import { Skills } from './features/skills/skills';
 import { Certifications } from './features/certifications/certifications';
+import { Footer } from './shared/components/footer/footer';
 
 @Component({
-  imports: [RouterOutlet,Navbar, HeroAbout, Experience,Skills,Certifications],
+  imports: [RouterOutlet,Navbar, HeroAbout, Experience,Skills,Certifications,Footer],
   selector: 'app-root',
   standalone: true,
   styleUrl: './app.css',
